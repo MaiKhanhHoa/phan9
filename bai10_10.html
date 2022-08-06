@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Tinh tien dien</h1>
+    <input type="number" id="sodien">
+    <h3 id="sotiendien">So tien dien</h3>
+    <button type="button" onclick="tinhtoan()">Xem</button>
+</body>
+<script>
+    function tinhtoan() {
+        let sodien= document.getElementById("sodien").value;
+        let sotien
+        if (sodien<=50) {
+            sotien = sodien*1678
+        }
+        else if (sodien<=100) {
+            sotien = 50*1678 + (sodien-50)*1734
+        }
+        else {
+            sotien = 100*1734+ (sodien-100)*2014
+        }
+        document.getElementById("sotiendien").innerHTML=sotien+sotien*0.08
+    }
+
+</script>
+</html>

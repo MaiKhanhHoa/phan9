@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Tinh thue thu nhap ca nhan</h1>
+    <input type="number" id="thunhap">
+    <button type="button" onclick="tinhtienthue()">Tien thue</button>
+    <h3 id="hienthi"> </h3>
+</body>
+<script>
+  function tinhtienthue() {
+    let a=document.getElementById("thunhap").value;
+    let tienthue
+    if (a<=5) {
+      tienthue=a*0.05
+    }
+    else if (a<=10) {
+      tienthue=a*0.1-0.25
+    }
+    else if (a<=18) {
+      tienthue=a*0.15-0.75
+    }
+    else {
+      tienthue=a*0.2-1.65
+    }
+    document.getElementById("hienthi").innerHTML=tienthue
+  }
+</script>
+</html>
